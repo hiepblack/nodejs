@@ -1,0 +1,11 @@
+Chức Năng làm được :
+ + Thêm sản phẩm, danh mục
+ + Sửa sản phẩm
+ + Xoá sản phẩm ( Xoá tạm thời, xoá vĩnh viễn, khổi phục)
+ + get sản phẩm
+ + Phân trang
+ + Lọc sản phẩm theo Brand
+ + Giỏ hàng (order,orderdetail)
+ + Validate với Joi
+ + Đăng kí, Đăng nhập, phân quyền,...
+ + Upload ảnh

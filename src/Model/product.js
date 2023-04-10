@@ -1,11 +1,26 @@
 import mongoose from "mongoose";
+import mongoosePaginate from "mongoose-paginate-v2";
 
-const productSchema = mongoose.Schema({
-    name:String,
-    price:Number,
-    description:String,
-    status:Boolean,
-    quality:Number,
-})
+const productSchema = mongoose.Schema(
+  {
+    name: String,
+    price: Number,
+    brand: String,
+    image: [String],
+    description: String,
+    status: {
+      type: Boolean,
+      default: true,
+    },
+    quality: Number,
+    categoryId: {
+      type: mongoose.Types.ObjectId,
+      ref: "Category",
+    },
+  },
+  { timestamps: true }
+);
 
-export default mongoose.model('Product', productSchema);
+productSchema.plugin(mongoosePaginate);
+
+export default mongoose.model("Product", productSchema);
